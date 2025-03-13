@@ -10,11 +10,13 @@ server:
 spring:
   application:
     name: config-service
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/Alex777360/config-repo
+          uri: https://github.com/BohdanDidenko/config-repo
           default-label: main
           timeout: 5
           clone-on-start: true
